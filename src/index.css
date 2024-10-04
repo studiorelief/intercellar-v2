@@ -1,0 +1,202 @@
+/* 
+! Navbar 
+*/
+
+.navbar_menu-link:hover .navbar_line {
+  width: 100%;
+}
+
+.navbar_dark-mode-toggle:hover .navbar_dark-mode-icon.is-light {
+  transform: rotate(45deg);
+}
+
+.w-mod-js.dark-mode .navbar_dark-mode-icon.is-light {
+  display: flex;
+}
+
+.w-mod-js.dark-mode .navbar_dark-mode-toggle .navbar_dark-mode-icon-wrapper {
+  display: none;
+}
+
+.navbar_dark-mode-toggle:hover .navbar_dark-mode-icon-hover {
+  opacity: 1;
+}
+
+.navbar_brand-wrapper:hover .navbar_brand-icon {
+  transform: rotate(90deg);
+}
+
+.button .button-coin-right {
+  opacity: 0;
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
+}
+
+.button:hover .button-coin-right {
+  opacity: 1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
+}
+
+.button .button-coin-left {
+  opacity: 0;
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(-0.5rem, 0px)
+    translate(-100%, 0px);
+}
+
+.button:hover .button-coin-left {
+  opacity: 1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-0.5rem, 0px) translate(-100%, 0px);
+}
+
+/* 
+! Swiper / HP HERO
+*/
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  opacity: 1;
+}
+
+/* 
+! Swiper / HP CELLAR
+*/
+
+.swiper.is-hp-cellar {
+  overflow: visible;
+}
+
+.hp_dream_logo {
+  mix-blend-mode: difference;
+  object-fit: contain;
+}
+
+.hp_dream_background {
+  mix-blend-mode: difference;
+}
+
+/* .w-mod-js.dark-mode .hp_dream_logo {
+  mix-blend-mode: difference;
+  object-fit: contain;
+} */
+
+/* 
+! Swiper / HP CATEGORIES
+*/
+
+.w-mod-js.dark-mode .hp_categories_cards {
+  background: var(
+    --Linear,
+    linear-gradient(180deg, rgba(16, 16, 16, 0.6) 0%, rgba(0, 0, 0, 0) 100%)
+  );
+}
+
+.hp_categories_cards .button-background {
+  background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0), hsla(0, 0%, 100%, 0));
+  box-shadow: inset 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0rem);
+}
+
+.w-mod-js.dark-mode .hp_categories_cards .button-background {
+  background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.2));
+  box-shadow: inset 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.3125rem);
+}
+
+/* 
+! GLB
+*/
+
+.glb_loyalty {
+  height: 100%;
+  width: 100%;
+}
+
+model-viewer {
+  --progress-bar-color: transparent;
+}
+
+.hp_categories_cards .is-glb-cards {
+  transition: transform 400ms ease-out;
+}
+
+.hp_categories_cards:hover .is-glb-cards {
+  transform: scale(0.9);
+}
+
+.hp_categories_cards:not(:hover) .is-glb-cards {
+  transform: scale(1);
+}
+
+/* 
+! BUTTON
+*/
+
+.button-gradient.is-silver {
+  border-radius: var(--border-radius--radius-round); /*1*/
+  border: 1px solid transparent; /*2*/
+  background: conic-gradient(
+      from 200deg,
+      #7d5d36,
+      #e9e9c9,
+      #866945,
+      #ad8655,
+      #b09257,
+      #7f5f39,
+      #6e4116,
+      #683a10,
+      #7d5d36
+    )
+    border-box; /*3*/
+  -webkit-mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+
+.button-gradient.is-gold {
+  border-radius: var(--border-radius--radius-round); /*1*/
+  border: 1px solid transparent; /*2*/
+  background: conic-gradient(
+      from 200deg,
+      #7d5d36,
+      #e9e9c9,
+      #866945,
+      #ad8655,
+      #b09257,
+      #7f5f39,
+      #6e4116,
+      #683a10,
+      #7d5d36
+    )
+    border-box; /*3*/
+  -webkit-mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+
+.button-gradient.is-swissborg {
+  border-radius: var(--border-radius--radius-round); /*1*/
+  border: 1px solid transparent; /*2*/
+  background-color: rgba(63, 255, 218, 0.5);
+  -webkit-mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask: /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
