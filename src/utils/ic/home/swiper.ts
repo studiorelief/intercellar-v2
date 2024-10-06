@@ -42,7 +42,7 @@ export function swiperHpCellar() {
     new Swiper(container, {
       loop: true,
       centeredSlides: true,
-      slidesPerView: '6',
+      slidesPerView: 'auto',
       spaceBetween: 32,
       mousewheel: {
         forceToAxis: true,

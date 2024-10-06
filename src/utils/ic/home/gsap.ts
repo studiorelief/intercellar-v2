@@ -12,10 +12,10 @@ export function parallaxHpNewsletter() {
   gsap.fromTo(
     mockup,
     {
-      y: '0',
+      y: '-2.5rem',
     },
     {
-      y: '6rem',
+      y: '5rem',
       ease: 'none',
       scrollTrigger: {
         markers: false,
@@ -26,6 +26,20 @@ export function parallaxHpNewsletter() {
       },
     }
   );
+}
+
+export function boucleHpNews() {
+  const mockup = document.querySelector('.hp_newsletter_mockup-y-move');
+
+  if (!mockup) return;
+
+  gsap.to(mockup, {
+    y: '2rem',
+    duration: 2,
+    ease: 'power1.inOut',
+    yoyo: true,
+    repeat: -1,
+  });
 }
 
 export function parallaxHpHero() {
@@ -64,11 +78,10 @@ export function parallaxHpNews() {
   const section = document.querySelector('.section_hp_newsletter');
 
   if (!videoNewsletter || !section) return;
-
   gsap.fromTo(
     videoNewsletter,
     {
-      y: '0rem',
+      y: '-12.5vh',
     },
     {
       y: '25vh',
@@ -76,7 +89,7 @@ export function parallaxHpNews() {
       scrollTrigger: {
         markers: false,
         trigger: section,
-        start: 'top top',
+        start: 'top bottom',
         end: 'bottom top',
         scrub: 0.5,
       },

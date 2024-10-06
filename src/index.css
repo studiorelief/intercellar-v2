@@ -26,27 +26,6 @@
   transform: rotate(90deg);
 }
 
-.button .button-coin-right {
-  opacity: 0;
-  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
-}
-
-.button:hover .button-coin-right {
-  opacity: 1;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
-}
-
-.button .button-coin-left {
-  opacity: 0;
-  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(-0.5rem, 0px)
-    translate(-100%, 0px);
-}
-
-.button:hover .button-coin-left {
-  opacity: 1;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-0.5rem, 0px) translate(-100%, 0px);
-}
-
 /* 
 ! Swiper / HP HERO
 */
@@ -107,6 +86,14 @@
 }
 
 /* 
+! LOYALTY
+*/
+
+.hp_loyalty_litepaper-wrapper:hover .navbar_line {
+  width: 100%;
+}
+
+/* 
 ! GLB
 */
 
@@ -134,6 +121,27 @@ model-viewer {
 /* 
 ! BUTTON
 */
+
+.button .button-coin-right {
+  opacity: 0;
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
+}
+
+.button:hover .button-coin-right {
+  opacity: 1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0.5rem, 0px) translate(100%, 0px);
+}
+
+.button .button-coin-left {
+  opacity: 0;
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate(-0.5rem, 0px)
+    translate(-100%, 0px);
+}
+
+.button:hover .button-coin-left {
+  opacity: 1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-0.5rem, 0px) translate(-100%, 0px);
+}
 
 .button-gradient.is-silver {
   border-radius: var(--border-radius--radius-round); /*1*/
@@ -190,7 +198,13 @@ model-viewer {
 .button-gradient.is-swissborg {
   border-radius: var(--border-radius--radius-round); /*1*/
   border: 1px solid transparent; /*2*/
-  background-color: rgba(63, 255, 218, 0.5);
+  background: conic-gradient(
+      from 200deg,
+      rgba(63, 255, 218, 0.5),
+      rgba(63, 255, 218, 0.5),
+      rgba(63, 255, 218, 0.5)
+    )
+    border-box; /*3*/
   -webkit-mask: /*4*/
     linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
@@ -199,4 +213,34 @@ model-viewer {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
+}
+
+.button:hover .button-background.is-swissborg {
+  background-color: #207564;
+}
+
+.button:hover .button-gradient.is-swissborg {
+  background-color: #207564;
+}
+
+/*
+! BUTTON / HP LOYALTY
+*/
+
+.hp_benefits_cards .hp_benefits_button-wrapper {
+  opacity: 0;
+}
+
+.hp_benefits_cards:hover .hp_benefits_button-wrapper {
+  opacity: 1;
+}
+
+.hp_benefits_cards .hp_benefits_bg-hover {
+  opacity: 0;
+  height: 75%;
+}
+
+.hp_benefits_cards:hover .hp_benefits_bg-hover {
+  opacity: 0.03;
+  height: 100%;
 }
