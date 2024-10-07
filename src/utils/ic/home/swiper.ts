@@ -30,6 +30,7 @@ export function swiperHpHero() {
       pagination: {
         el: '.hp_hero_pagination-wrapper',
         dynamicBullets: false,
+        clickable: true,
       },
     });
   });

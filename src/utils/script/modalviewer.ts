@@ -10,31 +10,39 @@ export function loadModelViewerScript() {
 }
 
 export function resetGlbCoin() {
-  const modelViewer = document.querySelector('#reveal-coin') as HTMLElement & {
-    cameraOrbit: string;
-    returnToInitialPosition: number;
-  };
+  const modelViewers = document.querySelectorAll(
+    '#hp-loyalty-1, #cellar-hero-1, #cellar-hero-2'
+  ) as NodeListOf<
+    HTMLElement & {
+      cameraOrbit: string;
+      returnToInitialPosition: number;
+    }
+  >;
 
-  if (!modelViewer) return;
+  if (modelViewers.length === 0) return;
 
   const initialOrbit = '45deg 90deg 45deg';
-  let userInteracting = false;
+  const userInteracting = new WeakMap<HTMLElement, boolean>();
 
-  modelViewer.addEventListener('camera-change', () => {
-    userInteracting = true;
-    clearTimeout(modelViewer.returnToInitialPosition);
-    modelViewer.returnToInitialPosition = window.setTimeout(() => {
-      userInteracting = false;
-      modelViewer.cameraOrbit = initialOrbit;
-    }, 50);
+  modelViewers.forEach((modelViewer) => {
+    userInteracting.set(modelViewer, false);
+
+    modelViewer.addEventListener('camera-change', () => {
+      userInteracting.set(modelViewer, true);
+      clearTimeout(modelViewer.returnToInitialPosition);
+      modelViewer.returnToInitialPosition = window.setTimeout(() => {
+        userInteracting.set(modelViewer, false);
+        modelViewer.cameraOrbit = initialOrbit;
+      }, 50);
+    });
+
+    const resetCameraOrbit = () => {
+      if (!userInteracting.get(modelViewer)) {
+        modelViewer.cameraOrbit = initialOrbit;
+      }
+    };
+
+    modelViewer.addEventListener('mouseup', resetCameraOrbit);
+    modelViewer.addEventListener('touchend', resetCameraOrbit);
   });
-
-  const resetCameraOrbit = () => {
-    if (!userInteracting) {
-      modelViewer.cameraOrbit = initialOrbit;
-    }
-  };
-
-  modelViewer.addEventListener('mouseup', resetCameraOrbit);
-  modelViewer.addEventListener('touchend', resetCameraOrbit);
 }

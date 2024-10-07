@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.navbar_menu-link.w--current .navbar_line {
+  width: 100%;
+}
+
 .navbar_dark-mode-toggle:hover .navbar_dark-mode-icon.is-light {
   transform: rotate(45deg);
 }
@@ -33,6 +37,8 @@
 .swiper-pagination-bullet {
   background-color: #fff !important;
   opacity: 0.5;
+  height: 1rem !important;
+  width: 1rem !important;
 }
 
 .swiper-pagination-bullet .swiper-pagination-bullet-active {
@@ -86,10 +92,11 @@
 }
 
 /* 
-! LOYALTY
+! LOYALTY & CELLAR HERO
 */
 
-.hp_loyalty_litepaper-wrapper:hover .navbar_line {
+.hp_loyalty_litepaper-wrapper:hover .navbar_line,
+.cellar_hero_litepaper-wrapper:hover .navbar_line {
   width: 100%;
 }
 
