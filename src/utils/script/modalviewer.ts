@@ -10,9 +10,7 @@ export function loadModelViewerScript() {
 }
 
 export function resetGlbCoin() {
-  const modelViewers = document.querySelectorAll(
-    '#hp-loyalty-1, #cellar-hero-1, #cellar-hero-2'
-  ) as NodeListOf<
+  const modelViewers = document.querySelectorAll('#hp-loyalty-1, #cellar-cta-1') as NodeListOf<
     HTMLElement & {
       cameraOrbit: string;
       returnToInitialPosition: number;

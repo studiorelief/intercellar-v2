@@ -113,15 +113,15 @@ model-viewer {
   --progress-bar-color: transparent;
 }
 
-.hp_categories_cards .is-glb-cards {
+.hp_categories_cards .hp_categories_cards-image {
   transition: transform 400ms ease-out;
 }
 
-.hp_categories_cards:hover .is-glb-cards {
+.hp_categories_cards:hover .hp_categories_cards-image {
   transform: scale(0.9);
 }
 
-.hp_categories_cards:not(:hover) .is-glb-cards {
+.hp_categories_cards:not(:hover) .hp_categories_cards-image {
   transform: scale(1);
 }
 
@@ -250,4 +250,17 @@ model-viewer {
 .hp_benefits_cards:hover .hp_benefits_bg-hover {
   opacity: 0.03;
   height: 100%;
+}
+
+/* mobile adj */
+
+@media screen and (max-width: 989px) {
+  .hp_benefits_cards .hp_benefits_bg-hover {
+    opacity: 0.03;
+    height: 100%;
+  }
+
+  .hp_benefits_cards .hp_benefits_button-wrapper {
+    opacity: 1;
+  }
 }
