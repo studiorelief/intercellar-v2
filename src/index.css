@@ -1,3 +1,6 @@
+@import './utils/ic/concept/concept-slider.css';
+@import './utils/ic/team/team.css';
+
 /* 
 ! Navbar 
 */
@@ -263,4 +266,10 @@ model-viewer {
   .hp_benefits_cards .hp_benefits_button-wrapper {
     opacity: 1;
   }
+}
+
+/* about */
+
+.w-mod-js.dark-mode .about_press_asset {
+  filter: grayscale(00%);
 }

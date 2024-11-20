@@ -1,0 +1,108 @@
+/*! Page Concept */
+
+.swiper_component.is-concept .swiper-pagination-bullet {
+  width: auto !important;
+  min-width: 10rem;
+  height: auto !important;
+  padding-top: 0.875rem !important;
+  padding-right: 1.5rem !important;
+  padding-bottom: 1rem !important;
+  padding-left: 1.25rem !important;
+  opacity: 0.5;
+  transition-property: border-radius, text-shadow, box-shadow, opacity;
+  transition-duration: 250ms, 250ms, 250ms, 250ms;
+  transition-timing-function: ease, ease, ease, ease;
+  font-family: Tt norms pro;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--color--transparent) !important;
+  text-align: left;
+}
+
+.swiper_component.is-concept .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border: 1px solid var(--dark--border-color--border-primary-0-1);
+  /* box-shadow: inset 0 0 6px 0 rgba(255, 255, 255, 0.25); */
+  opacity: 1;
+  backdrop-filter: blur(8px);
+  text-shadow: 0 0 0.75rem var(--white);
+  background-color: var(--color--transparent);
+}
+
+.swiper_component.is-concept .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+
+.swiper_component.is-concept .swiper-pagination-bullet:medium {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+/* ! Page Concept - Radial */
+
+.swiper-slide.is-concept::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent, black);
+  opacity: 0; /* Commencer invisible */
+  z-index: 1; /* Assurez-vous qu'il est au-dessus du contenu de la diapositive */
+}
+
+/*! PC */
+@media (min-width: 1025px) {
+  .swiper-vertical > .swiper-pagination-bullets,
+  .swiper-pagination-vertical.swiper-pagination-bullets {
+    right: auto !important;
+  }
+}
+
+/*! Mobile */
+@media (max-width: 1024px) {
+  .swiper-vertical > .swiper-pagination-bullets,
+  .swiper-pagination-vertical.swiper-pagination-bullets {
+    top: 10% !important;
+    left: 0% !important;
+    overflow: scroll !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .swiper_component.is-concept .swiper-pagination-bullet {
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  .concept_cards {
+    backdrop-filter: blur(100px) !important;
+  }
+
+  .swiper_component.is-concept .swiper-pagination-bullet {
+    min-width: auto;
+    padding-top: 0.875rem !important;
+    padding-right: 1.5rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1.25rem !important;
+  }
+}
+
+/*! Radial transition */
+.concept_radial {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  transition: background-image 2s ease-out;
+}

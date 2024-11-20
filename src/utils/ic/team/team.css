@@ -1,0 +1,35 @@
+/* state */
+
+.about_team_social-w {
+  opacity: 0;
+  transform: translateY(-1.5rem);
+  transition:
+    opacity 250ms ease-out,
+    transform 250ms ease-out;
+}
+
+.about_team_icon {
+  transition:
+    transform 250ms ease-out,
+    filter 250ms ease-out;
+}
+
+.about_team_cards-cadre {
+  opacity: 0.6;
+  transition: opacity 250ms ease-out;
+}
+
+/* hover effect */
+
+.about_team_cards:hover .about_team_social-w {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.about_team_cards:hover .about_team_icon {
+  filter: brightness(120%);
+}
+
+.about_team_cards:hover .about_team_cards-cadre {
+  opacity: 1;
+}
