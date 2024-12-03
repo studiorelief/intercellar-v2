@@ -17,7 +17,7 @@ export function swiperHpHero() {
         forceToAxis: true,
       },
       autoplay: {
-        delay: 8000,
+        delay: 30000,
         pauseOnMouseEnter: false,
         disableOnInteraction: false,
         reverseDirection: true,
